@@ -1,0 +1,35 @@
+body{
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container .label_packet {
+    width: 250px;
+    height: 35px;
+    right: 830px;
+    border-radius: 20px;
+    background-color: #FEC34D;
+    z-index: 99999999999;
+    position: absolute;
+    top: 160px;
+}
+
+.label_packet_2 {
+    width: 250px;
+    height: 35px;
+    right: 830px;
+    border-radius: 20px;
+    background-color: #FEC34D;
+    z-index: 99999999999;
+    position: absolute;
+    top: 610px;
+}
+
+@media (max-width: 991px){
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+}
