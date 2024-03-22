@@ -6,10 +6,68 @@
         <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}"> 
         <link rel="icon" href="{{ asset('assets/logo/favicon.png') }}" type="image/x-icon">   
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <style>
+            #preloader{
+                background: white;
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                z-index:9999;
+            }
+            .ring{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                animation: ring 2s linear infinite;
+            }
+
+            .center{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            @keyframes ring{
+                0%{
+                    transform: rotate(0deg);
+                    box-shadow: 1px 5px 2px #15baef;
+                }
+                50%{
+                    transform: rotate(180deg);
+                    box-shadow: 1px 5px 2px #18b201;
+                }
+                100%{
+                    transform: rotate(360deg);
+                    box-shadow: 1px 5px 2px #0456c8;
+                }
+            }
+
+            .ring:before{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                box-shadow: 0 0 5px #15baef;
+            }
+        </style>
     </head>
 
     </body class="vh-100 overflow-hidden">
+        <!-- Loading website -->
+        <div id="preloader">
+            <div class="center">
+                <div class="ring"></div>
+                <span><img style="width: 300px;" src="{{ asset('assets/logo/logo.png') }}" alt=""></span>
+            </div>
+        </div>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
@@ -51,7 +109,52 @@
             </div>
         </nav>
 
-        <div class="container" style="margin-top: 20px">
+        <div class="container" style="margin-top: 100px">
+
+            <div class="row">
+                <div class="col" data-aos="fade-left">
+                    <h1 class="gradient-text"><strong>Selamat Datang</strong></h1>
+                    <p>Di StudioProjectID</p><br>
+                    <h5>Keunggulan Kami</h5><hr style="width:300px;border: 0;border-top: 2px solid #000;">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="{{ asset('assets/image_content/kerja_sama.png') }}" width="80px">
+                        </div>
+                        <div class="col-9">
+                            <p style="margin-top:25px;">100% Terpecaya</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="{{ asset('assets/image_content/team.png') }}" width="80px">
+                        </div>
+                        <div class="col-9">
+                            <p style="margin-top:25px;">Tim Profesional</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="{{ asset('assets/image_content/bergaransi.png') }}" width="80px">
+                        </div>
+                        <div class="col-9">
+                        <p style="margin-top:25px;">Bergaransi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col" data-aos="fade-right">
+                    <h3>Jasa Pengembangan Maupun Pembuatan Website & Android</h3><br>
+                    <p>Perkenalkan, Kami Dari Tim StudioProjectID Menawarkan Kalian Untuk Jasa Dalam Pembuatan, Pengembangan, Dan Custome Website Maupun Android, Sesuai Dengan Kebutuhan Anda.</p>
+                    <p style="color:#FEC34D"><strong>Wujudkan Sistem Impian Kalian Bersama Kami, Kami Siap Membantu Untuk Mewujudkannya.</strong></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container" style="margin-top: 200px" data-aos="fade-up">
+
             <center>
                 <h3><strong>Silahkan Pilih Paket Website Anda</strong></h3>
                 <p>Pilih paket sesuai dengan kebutuhan anda</p>
@@ -104,7 +207,11 @@
                         <br>
                     </div>
                 </div>
-            </div><br>
+            </div>
+        </div>    
+        <br>
+        
+        <div class="container" style="margin-top: 200px" data-aos="fade-up">
             <center>
                 <h3><strong>Silahkan Pilih Paket Android Anda</strong></h3>
                 <p>Pilih paket sesuai dengan kebutuhan anda</p>
@@ -159,5 +266,19 @@
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="898e7672-5dbc-405d-ad77-c436054c8a35";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            var loader = document.getElementById("preloader");
+
+                window.addEventListener("load", function(){
+                    loader.style.display = "none";
+                })
+
+            AOS.init({
+                duration: 1500
+            });
+        </script>
     </body>
 </html>

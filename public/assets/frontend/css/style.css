@@ -11,9 +11,17 @@ body{
     right: 830px;
     border-radius: 20px;
     background-color: #FEC34D;
-    z-index: 99999999999;
+    z-index: 999;
     position: absolute;
-    top: 160px;
+    top: 920px;
+    /* transition: transform 0.5s ease, box-shadow 0.5s ease; */
+}
+
+.gradient-text {
+    font-family: 'Slab Serif', serif;
+    background: linear-gradient(100deg, #FEC34D, #AFEEEE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .label_packet_2 {
@@ -25,6 +33,15 @@ body{
     z-index: 99999999999;
     position: absolute;
     top: 610px;
+}
+
+.card{
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 991px){
