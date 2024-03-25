@@ -19,7 +19,7 @@ body{
 
 .gradient-text {
     font-family: 'Slab Serif', serif;
-    background: linear-gradient(100deg, #FEC34D, #AFEEEE);
+    background: linear-gradient(100deg, #880808, #1B1E23);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

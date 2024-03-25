@@ -84,7 +84,7 @@
                     
                     <!-- SideBar Header -->
                     <div class="offcanvas-header text-black border-bottom">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="{{ asset('assets/logo/logo2.png') }}" style="width:250px;"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     
@@ -142,15 +142,47 @@
                     </div>
                 </div>
                 <div class="col">
-
+                    <img src="{{ asset('assets/image_content/laptop.png') }}" width="650px">
                 </div>
                 <div class="col" data-aos="fade-right">
                     <h3>Jasa Pengembangan Maupun Pembuatan Website & Android</h3><br>
                     <p>Perkenalkan, Kami Dari Tim StudioProjectID Menawarkan Kalian Untuk Jasa Dalam Pembuatan, Pengembangan, Dan Custome Website Maupun Android, Sesuai Dengan Kebutuhan Anda.</p>
-                    <p style="color:#FEC34D"><strong>Wujudkan Sistem Impian Kalian Bersama Kami, Kami Siap Membantu Untuk Mewujudkannya.</strong></p>
+                    <p style="color:#880808"><strong>Wujudkan Sistem Impian Kalian Bersama Kami, Kami Siap Membantu Untuk Mewujudkannya.</strong></p>
                 </div>
             </div>
 
+        </div>
+
+        <div class="container" style="margin-top: 200px">
+            <div class="row">
+                <div class="col" data-aos="fade-up">
+                    <div class="card" style="padding:20px;background-color:#f4f4f4">
+                        <center>
+                            <img src="{{ asset('assets/image_content/customer_care.png') }}" width="100px"><br><br>
+                            <h4 style="color:#880808">Customer Care</h4><br>
+                            <p style="font-family: 'Roboto Slab', sans-serif;">Kami siap membantu untuk mewujudkan sistem sesuai dengan ekspetasi anda, dalam membangun website ataupun android. 100% tanggung jawab kami sampai selesai.</p>
+                        </center>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up">
+                    <div class="card" style="padding:20px;background-color:#f4f4f4">
+                        <center>
+                            <img src="{{ asset('assets/image_content/web_design.png') }}" width="120px"><br><br>
+                            <h4 style="color:#880808">Full Design & Development</h4><br>
+                            <p style="font-family: 'Roboto Slab', sans-serif;">Sampaikan ide dan konsep kalian untuk kebutuhan sistem yang akan dibangun. Pastikan semua ide anda sudah kalian berikan, agar sistem sesuai dengan apa yang kalian inginkan.</h6>
+                        </center>
+                    </div>
+                </div>
+                <div class="col" data-aos="fade-up">
+                    <div class="card" style="padding:20px;background-color:#f4f4f4">
+                        <center>
+                            <img src="{{ asset('assets/image_content/warranty.png') }}" width="110px"><br><br>
+                            <h4 style="color:#880808">Full Warranty</h4><br>
+                            <p style="font-family: 'Roboto Slab', sans-serif;">Full garansi, apabila tidak sesuai dengan perjanjian diawal. Maka uang akan dikembalikan 100%. Agar silaturahmi tidak putus, mari kita saling berkerja sama untuk sistem yang kalian inginkan.</p>
+                        </center>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="container" style="margin-top: 200px" data-aos="fade-up">
@@ -165,7 +197,7 @@
                         <br>
                         <center>
                             <h5><strong>Mahasiswa</strong></h5>
-                            <small>(Free Konsultasi)</small><br>
+                            <small>(Free Konsultasi)</small><br><br>
                             <img src="{{ asset('assets/image_content/student.png') }}" width="80px"><br><br>
                             <small>Mulai Dari Harga</small>
                             <h5>Rp. 2.000.000/projek</h5><br>
@@ -184,7 +216,7 @@
                         <br>
                         <center>
                             <h5><strong>Bisnis Premium</strong></h5>
-                            <small>(UMKM, Company Profile)</small><br>
+                            <small>(UMKM, Company Profile)</small><br><br>
                             <img src="{{ asset('assets/image_content/little_business.png') }}" width="80px"><br><br>
                             <small>Mulai Dari Harga</small>
                             <h5>Rp. 3.000.000/projek</h5><br>
@@ -198,7 +230,7 @@
                         <br>
                         <center>
                             <h5><strong>Bisnis Diamond</strong></h5>
-                            <small>(PT, CV)</small><br>
+                            <small>(PT, CV)</small><br><br>
                             <img src="{{ asset('assets/image_content/apertment.png') }}" width="90px"><br><br>
                             <small>Mulai Dari Harga</small>
                             <h5>Rp. 5.000.000/projek</h5><br>
@@ -208,8 +240,31 @@
                     </div>
                 </div>
             </div>
-        </div>    
-        <br>
+        </div>
+        
+        <div class="container" style="margin-top: 200px" data-aos="fade-up">
+            <div class="card" style="padding:20px;background-color:#AFEEEE;background-image: url({{ asset('assets/image_content/bg_card.png') }});"><br>
+                <center>
+                    <div class="row">
+                        <div class="col">
+                            <img src="{{ asset('assets/image_content/experience.png') }}" width="100px"><br><br>
+                            <h3 style="color:#880808;"><strong>3</strong></h3>
+                            <h5>Years Experience</h5>
+                        </div>
+                        <div class="col">
+                            <img src="{{ asset('assets/image_content/our_team.png') }}" width="120px"><br><br>
+                            <h3 style="color:#880808;"><strong>5</strong></h3>
+                            <h5>Programmers</h5>
+                        </div>
+                        <div class="col">
+                            <img src="{{ asset('assets/image_content/client.png') }}" width="136px"><br><br>
+                            <h3 style="color:#880808;"><strong>15</strong></h3>
+                            <h5>Total Clients</h5>
+                        </div>
+                    </div>
+                </center><br>
+            </div>
+        </div>
         
         <div class="container" style="margin-top: 200px" data-aos="fade-up">
             <center>
@@ -222,7 +277,7 @@
                         <br>
                         <center>
                             <h5><strong>Mahasiswa</strong></h5>
-                            <small>(Free Konsultasi)</small><br>
+                            <small>(Free Konsultasi)</small><br><br>
                             <img src="{{ asset('assets/image_content/student.png') }}" width="80px"><br><br>
                             <small>Mulai Dari Harga</small>
                             <h5>Rp. 4.000.000/projek</h5><br>
@@ -241,7 +296,7 @@
                         <br>
                         <center>
                             <h5><strong>Bisnis Premium</strong></h5>
-                            <small>(UMKM, Company Profile)</small><br>
+                            <small>(UMKM, Company Profile)</small><br><br>
                             <img src="{{ asset('assets/image_content/little_business.png') }}" width="80px"><br><br>
                             <small>Mulai Dari Harga</small>
                             <h5>Rp. 6.000.000/projek</h5><br>
@@ -255,7 +310,7 @@
                         <br>
                         <center>
                             <h5><strong>Bisnis Diamond</strong></h5>
-                            <small>(PT, CV)</small><br>
+                            <small>(PT, CV)</small><br><br>
                             <img src="{{ asset('assets/image_content/apertment.png') }}" width="90px"><br><br>
                             <small>Mulai Dari Harga</small>
                             <h5>Rp. 10.000.000/projek</h5><br>
