@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index(){
         
-        $title = "Home";
+        $title = "Jasa Pengembangan Maupun Pembuatan Website & Android";
 
         return view('frontend.home', ['title' => $title]);
     }

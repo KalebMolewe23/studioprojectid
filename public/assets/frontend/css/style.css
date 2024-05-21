@@ -10,14 +10,12 @@ section{
     padding: 10rem 9% 2rem;
 }
 
-
 .navbar{
-    background-color: #fff;
+    background-color: #222F3E;
     height: 80px;
     margin: 20px;
     border-radius: 16px;
     padding: 0.5rem;
-    box-shadow: 2px 1px 20px 1px #e1e1e1;;
 }
 
 .navbar a{
@@ -35,8 +33,14 @@ section{
     outline: none;
 }
 
+.fixed-top.scrolled{
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+    box-shadow: 2px 1px 10px 1px #e1e1e1;
+}
+
 .home{
-    background: #50c878;
+    background: #222F3E;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +122,7 @@ section{
 .popup{
     visibility: hidden;
     width: 180px;
-    background-color: #50c878;
+    background-color: ##222F3E
     color: #fff;
     text-align: center;
     border-radius: 6px;

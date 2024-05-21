@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title ?></title>
         <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}"> 
-        <link rel="icon" href="{{ asset('assets/logo/favicon.png') }}" type="image/x-icon">   
+        <link rel="icon" href="{{ asset('assets/logo/logo_only.png') }}" type="image/x-icon">   
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -71,7 +71,7 @@
         <div id="preloader">
             <div class="center">
                 <div class="ring"></div>
-                <span><img style="width: 300px;" src="{{ asset('assets/logo/logo.png') }}" alt=""></span>
+                <span><img style="width: 200px;margin-top:100px" src="{{ asset('assets/logo/logo_with_text.png') }}" alt=""></span>
             </div>
         </div>
 
@@ -79,7 +79,7 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand me-auto" href="#">
-                    <img style="width: 150px;" src="{{ asset('assets/logo/logo2.png') }}" alt="">
+                    <img style="width: 20px;margin-top:-1px" src="{{ asset('assets/logo/logo_only.png') }}" alt=""> <span style="color:#50C878">TUDIOprojectid</span>
                 </a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -91,16 +91,16 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2 active" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+                                <a style="color:#50C878" class="nav-link mx-lg-2 active" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="#"><i class="fas fa-kaaba"></i> About</a>
+                                <a style="color:#50C878" class="nav-link mx-lg-2" href="#"><i class="fas fa-kaaba"></i> About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="#"><i class="far fa-newspaper"></i> Service</a>
+                                <a style="color:#50C878" class="nav-link mx-lg-2" href="#"><i class="far fa-newspaper"></i> Service</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="#"><i class="fas fa-th-large"></i> Contact</a>
+                                <a style="color:#50C878" class="nav-link mx-lg-2" href="#"><i class="fas fa-th-large"></i> Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -609,14 +609,23 @@
             </div>
         </div>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="898e7672-5dbc-405d-ad77-c436054c8a35";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(document).scroll(function () {
+                    var $nav = $(".fixed-top");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                });    
+            });
+        </script>
         <script>
             var loader = document.getElementById("preloader");
 
-                window.addEventListener("load", function(){
-                    loader.style.display = "none";
-                })
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+            })
 
             AOS.init({
                 duration: 1500
