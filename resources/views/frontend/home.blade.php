@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <!-- font menu -->
         <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
 
@@ -63,6 +65,12 @@
                 border-radius: 50%;
                 box-shadow: 0 0 5px #15baef;
             }
+            .leaflet-container {
+                height: 400px;
+                width: 600px;
+                max-width: 100%;
+                max-height: 100%;
+            }
         </style>
     </head>
 
@@ -79,7 +87,7 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand me-auto" href="#">
-                    <img style="width: 20px;margin-top:-1px" src="{{ asset('assets/logo/logo_only.png') }}" alt=""> <span style="color:#50C878">TUDIOprojectid</span>
+                    <img style="width: 20.5px;margin-top:-2px;" src="{{ asset('assets/logo/logo_only.png') }}" alt=""> <span style="color:#50C878">TUDIOprojectid</span>
                 </a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -151,7 +159,7 @@
                     <div class="col" data-aos="fade-right">
                         <h1>Jasa Pengembangan Maupun Pembuatan Website & Android</h1><br>
                         <p>Perkenalkan, Kami Dari Tim StudioProjectID Menawarkan Kalian Untuk Jasa Dalam Pembuatan, Pengembangan, Dan Custome Website Maupun Android, Sesuai Dengan Kebutuhan Anda.</p>
-                        <p><strong>Wujudkan Sistem Impian Kalian Bersama Kami, Kami Siap Membantu Untuk Mewujudkannya.</strong></p>
+                        <p style="color:#50C878"><strong>Wujudkan Sistem Impian Kalian Bersama Kami, Kami Siap Membantu Untuk Mewujudkannya.</strong></p>
                     </div>
                 </div>
             </div>
@@ -609,6 +617,15 @@
             </div>
         </div>
 
+        <div class="container" style="margin-top: 200px" data-aos="fade-up">
+            <center>
+                <h3><strong>Berikut Informasi Customer Yang Menggunakan Jasa Kami</strong></h3>
+                <p>Mari Bekerja Sama, Kami Pastikan Sistem Anda Sesuai Dengan Harapan Anda</p><br>
+
+                <div id="mapid" style="width: 1500px; height: 600px;"></div>
+            </center>
+        <div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="898e7672-5dbc-405d-ad77-c436054c8a35";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -630,6 +647,11 @@
             AOS.init({
                 duration: 1500
             });
+
+            var map = L.map('mapid').setView([-2.5489, 118.0149], 5); // Lintang dan bujur Indonesia tengah
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
         </script>
     </body>
 </html>
